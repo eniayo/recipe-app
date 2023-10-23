@@ -23,10 +23,10 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t your-username/my-app .
-        docker tag your-username/my-app your-username/my-app:latest
-        echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u your-username --password-stdin
-        docker push your-username/my-app:latest
+        docker build -t eni1998/recipe-app .
+        docker tag eni1998/recipe-app eni1998/recipe-app:latest
+        echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u eni1998 --password-stdin
+        docker push eni1998/recipe-app:latest
 
     - name: Deploy to Kubernetes
       run: kubectl apply -f deployment.yaml
