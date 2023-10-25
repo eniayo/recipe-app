@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: your-username/my-app:v2
+        image: eni1998/my-app:v2
         ports:
         - containerPort: 3000
         livenessProbe:
